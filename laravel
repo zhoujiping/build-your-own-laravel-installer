@@ -1,0 +1,15 @@
+#! /usr/bin/env php
+
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+use Zhoujiping\Demo\Console\NewCommand;
+use Symfony\Component\Console\Application;
+
+$app = new Application('Zhoujiping Laravel Installer', '1.0');
+
+$app->add(new NewCommand(new GuzzleHttp\Client));
+
+$app->run();
+
